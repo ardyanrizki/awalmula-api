@@ -426,7 +426,8 @@ div.container {
 
   .mini-banner .container .left {
     justify-content: space-between;
-  }
+    flex-direction: column;
+    }
 
   .mini-banner .container p {
     font-size: 16px;

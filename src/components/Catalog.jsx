@@ -22,22 +22,24 @@ export default function Catalog({ title, data, loading, error }) {
         <div className="catalog-name">
           <h2>{title}</h2>
         </div>
-        <div className="cards-container">
-          {
-            loading ?
-              <BeatLoader color="#476040" loading={loading} css={override} size={18} /> :
-              // eslint-disable-next-line
-              data.filter((item) => {
-                if (debounced === null)
-                  return item
-                else if (item.name.toLowerCase().includes(debounced.toLowerCase())) {
-                  return item
-                }
-              }).map((item, index) => (
-                <Card item={item} key={index} />
-              ))
-          }
-        </div>
+        {
+          loading ?
+          <BeatLoader color="#476040" loading={loading} css={override} size={18} /> :
+            <div className="cards-container">
+              {
+                // eslint-disable-next-line
+                data.filter((item) => {
+                  if (debounced === null)
+                    return item
+                  else if (item.name.toLowerCase().includes(debounced.toLowerCase())) {
+                    return item
+                  }
+                }).map((item, index) => (
+                  <Card item={item} key={index} />
+                ))
+              }
+            </div>
+        }
       </div>
     </section>
   )
