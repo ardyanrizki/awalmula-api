@@ -32,6 +32,18 @@ button {
   cursor: pointer;
 }
 
+.smooth-image {
+  transition: opacity 1500;
+}
+
+.image-visible {
+  opacity: 1;
+}
+
+.image-hidden {
+  opacity: 0;
+}
+
 header {
   background-color: #ffffff;
   padding-bottom: 50px;
@@ -74,7 +86,7 @@ nav img.cart {
 
 nav form input,
 nav form input:focus {
-  background: url('/search-icon.svg') top right no-repeat;
+  background: url('./assets/search-icon.svg') top right no-repeat;
   background-size: contain;
   width: 300px;
   padding: 12px 24px;
@@ -124,6 +136,7 @@ div.container {
   box-shadow: -1px 7px 17px 3px rgba(225, 225, 225, 0.25);
   -webkit-box-shadow: -1px 7px 17px 3px rgba(225, 225, 225, 0.25);
   -moz-box-shadow: -1px 7px 17px 3px rgba(225, 225, 225, 0.25);
+  overflow: hidden;
 }
 
 #catalog .cards-container {
@@ -143,7 +156,7 @@ div.container {
 .card .meta {
   width: 100%;
   padding: 0 25px;
-  margin-bottom: 25px;
+  margin: 25px 0;
 }
 
 .card .meta h6 {
@@ -178,6 +191,10 @@ div.container {
 .card button {
   background-color: #E59759;
   color: #ffffff;
+}
+
+#detail {
+  margin-top: 200px;
 }
 
 .detail-card {
@@ -323,8 +340,7 @@ div.container {
   }
 
   nav img.logo {
-    width: 50%;
-    margin: 30px 0;
+    margin: 30px auto;
   }
 
   nav a {
@@ -357,7 +373,7 @@ div.container {
 
   .card {
     background-color: #ffffff;
-    border-radius: 4%;
+    border-radius: 5%;
   }
 
   .card .meta h6 {
