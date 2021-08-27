@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ModalProvider } from "react-simple-modal-provider";
+import modals from './components/Modal'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,13 +11,13 @@ import { Provider } from 'react-redux'
 import store from './store/store'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <BrowserRouter>
+    <ModalProvider value={[modals]}>
+      <App />
+    </ModalProvider>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

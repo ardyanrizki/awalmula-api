@@ -7,17 +7,17 @@ import Detail from './pages/Detail';
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path="/product-detail/:id">
-          <Detail />
-        </Route>
-        <Route path="/cart">
-          <Cart />
-        </Route>
-        <Route path="/">
-          <AllProducts />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path="/product-detail/:id">
+            <Detail />
+          </Route>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/">
+            <AllProducts />
+          </Route>
+        </Switch>
     </div>
   );
 }

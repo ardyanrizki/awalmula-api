@@ -5,18 +5,17 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 export default function Cart() {
-  // const dispatch = useDispatch()
-
   const cart = useSelector(state => state.cart.cart)
 
-  // useEffect(() => {
-  //   dispatch(fetchProducts())
-  // }, [dispatch])
+  const emptyCartState = {
+    heading: 'Keranjang masih kosong',
+    subheading: 'Pilih produk dulu di beranda'
+  }
 
   return (
     <>
-      <Header placeholderText="Cari di cart..." />
-      <Catalog title="My Cart" data={cart} loading={false} error={false} />
+      <Header placeholderText="Cari di keranjang..." />
+      <Catalog title="Keranjang saya" products={cart} loading={false} error={false} emptyState={emptyCartState} />
       <Footer />
     </>
   )
