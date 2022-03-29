@@ -11,7 +11,6 @@ export default function Cart() {
     heading: 'Keranjang masih kosong',
     subheading: 'Pilih produk dulu di beranda'
   }
-
   return (
     <>
       <Header placeholderText="Cari di keranjang..." />
